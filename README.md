@@ -1,7 +1,7 @@
 # BookMart
 
 User Stories:
-[ ] User can log in with a utexas email that is persistent
+[ ] User can log in with a utexas email that is persistent \n
 [ ] User can view offers by item, prime
 [ ] User can search for an item by keyword
 [ ] User can post offer 
