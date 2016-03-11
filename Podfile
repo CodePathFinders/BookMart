@@ -7,5 +7,6 @@ target 'BookMart' do
 	pod 'Firebase', '>= 2.5.0'
 	pod 'AFNetworking'
 	pod 'SVProgressHUD'
+	pod "OAuthSwift", "~> 0.5.0"
 end
 
