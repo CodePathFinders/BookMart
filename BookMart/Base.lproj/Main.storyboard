@@ -7,6 +7,7 @@
     <customFonts key="customFonts">
         <mutableArray key="Lato-Medium.ttf">
             <string>Lato-Medium</string>
+            <string>Lato-Medium</string>
         </mutableArray>
         <mutableArray key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
@@ -47,13 +48,13 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6Z-Ql-twV">
-                                <rect key="frame" x="154" y="518" width="67" height="46"/>
+                                <rect key="frame" x="151" y="518" width="74" height="46"/>
                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="28"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Login ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0gN-z8-BEw" kind="show" id="ZqV-S0-wcc"/>
+                                    <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gq1-zw-ejd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BookMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdT-1U-tnG">
@@ -67,6 +68,9 @@
                                 <state key="normal" title="Forgot username or password?">
                                     <color key="titleColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onForgot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ltu-WM-K03"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="you@utexas.edu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-mv-KQi">
                                 <rect key="frame" x="50" y="295" width="276" height="29"/>
@@ -81,12 +85,22 @@
                                     <constraint firstAttribute="height" constant="1" id="ISH-83-fmJ"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yM8-ZS-f5n">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yM8-ZS-f5n">
                                 <rect key="frame" x="50" y="343" width="276" height="29"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j08-qW-hBz">
+                                <rect key="frame" x="145" y="480" width="84" height="46"/>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="28"/>
+                                <state key="normal" title="Signup">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSignup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ey3-0j-Pmd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration">
@@ -108,9 +122,11 @@
                             <constraint firstItem="dgb-mv-KQi" firstAttribute="leading" secondItem="Fsg-KT-Rpf" secondAttribute="leading" id="Ya3-mU-LoP"/>
                             <constraint firstItem="yM8-ZS-f5n" firstAttribute="top" secondItem="tWf-Wl-KV5" secondAttribute="bottom" constant="17" id="cVa-dw-bEx"/>
                             <constraint firstItem="Fsg-KT-Rpf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="cfK-yn-iSG"/>
+                            <constraint firstItem="Ybc-dt-zEw" firstAttribute="top" secondItem="j08-qW-hBz" secondAttribute="bottom" constant="32" id="ej8-Mm-8op"/>
                             <constraint firstItem="yM8-ZS-f5n" firstAttribute="leading" secondItem="Fsg-KT-Rpf" secondAttribute="leading" id="h2g-p8-gdE"/>
                             <constraint firstItem="Fsg-KT-Rpf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hFF-TQ-gyw"/>
                             <constraint firstItem="dgb-mv-KQi" firstAttribute="top" secondItem="Fsg-KT-Rpf" secondAttribute="top" id="nzH-hK-c9G"/>
+                            <constraint firstItem="j08-qW-hBz" firstAttribute="centerX" secondItem="fRU-hp-7BF" secondAttribute="centerX" id="ojo-1P-jMP"/>
                             <constraint firstItem="yM8-ZS-f5n" firstAttribute="trailing" secondItem="Fsg-KT-Rpf" secondAttribute="trailing" id="ov3-xN-xMC"/>
                             <constraint firstItem="tWf-Wl-KV5" firstAttribute="top" secondItem="dgb-mv-KQi" secondAttribute="bottom" constant="1" id="rBq-8U-UUd"/>
                             <constraint firstItem="CAu-qQ-vPa" firstAttribute="trailing" secondItem="Fsg-KT-Rpf" secondAttribute="trailing" id="rQB-Ci-APK"/>
@@ -123,14 +139,17 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="emailField" destination="dgb-mv-KQi" id="YEC-FU-CU0"/>
                         <outlet property="loginButton" destination="h6Z-Ql-twV" id="BGZ-og-cX5"/>
+                        <outlet property="passwordField" destination="yM8-ZS-f5n" id="zYN-Aa-ujS"/>
+                        <segue destination="PgD-b8-J0d" kind="presentation" identifier="loginSegue" id="fhc-2F-L3D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663.5" y="330.5"/>
+            <point key="canvasLocation" x="1485.5" y="380.5"/>
         </scene>
-        <!--Item 2-->
+        <!--Camera View Controller-->
         <scene sceneID="DsE-yn-LOR">
             <objects>
                 <viewController id="0gN-z8-BEw" customClass="CameraViewController" customModule="BookMart" customModuleProvider="target" sceneMemberID="viewController">
@@ -143,14 +162,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="m4u-pD-f5y"/>
+                    <navigationItem key="navigationItem" id="6Hh-op-qSS"/>
                     <connections>
                         <segue destination="FCX-ln-mp7" kind="show" identifier="showOffers" id="p9J-AZ-zbo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVb-BI-Pk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2197.5" y="702.46478873239437"/>
+            <point key="canvasLocation" x="3009" y="702"/>
         </scene>
         <!--Offers View Controller-->
         <scene sceneID="Wut-8B-Xnk">
@@ -233,6 +252,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8k-d3-nlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2197.5" y="6.3380281690140841"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="kgk-Xr-bNd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PgD-b8-J0d" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" id="m4u-pD-f5y"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cDm-2l-pyy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0gN-z8-BEw" kind="relationship" relationship="rootViewController" id="i2L-0s-m0J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9PU-hI-Kbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2197" y="702"/>
         </scene>
     </scenes>
     <resources>
