@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     
     let firebase = Firebase(url: "https://glowing-fire-6824.firebaseio.com/")
     let verification = "http://apilayer.net/api/check?access_key=b563ec350246bc5e1688fc6ae41da82f&email="
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

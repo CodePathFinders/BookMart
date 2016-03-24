@@ -1,21 +1,25 @@
 //
-//  OffersViewController.swift
+//  NavigationController.swift
 //  BookMart
 //
-//  Created by Sita Mulomudi on 3/10/16.
+//  Created by Nav Saini on 3/23/16.
 //  Copyright © 2016 CodePathFinders. All rights reserved.
 //
 
 import UIKit
 
-class OffersViewController: UIViewController {
+class NavigationController: UINavigationController {
 
-    @IBOutlet weak var navBar: UINavigationItem!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.navigationBar.translucent = true
+        self.navigationBar.backgroundColor = UIColor.blackColor()
+        self.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationBar.barStyle = .Black
+        self.navigationBar.titleTextAttributes = [
+            NSFontAttributeName : UIFont(name: "Lato-Medium", size: 24)!,
+            NSForegroundColorAttributeName : UIColor.whiteColor()
+        ]
         // Do any additional setup after loading the view.
     }
 

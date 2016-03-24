@@ -72,7 +72,7 @@
                                     <action selector="onForgot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ltu-WM-K03"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="you@utexas.edu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-mv-KQi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="pnavs@utexas.edu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-mv-KQi">
                                 <rect key="frame" x="50" y="295" width="276" height="29"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
@@ -89,7 +89,7 @@
                                 <rect key="frame" x="50" y="343" width="276" height="29"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j08-qW-hBz">
                                 <rect key="frame" x="145" y="480" width="84" height="46"/>
@@ -158,8 +158,17 @@
                         <viewControllerLayoutGuide type="bottom" id="ykx-ip-mLK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ID7-x0-Cvd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2u-Jf-tUM">
+                                <rect key="frame" x="155" y="269" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Wjh-sq-DMo" kind="show" id="OzO-HP-oTL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Hh-op-qSS"/>
@@ -169,9 +178,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVb-BI-Pk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3009" y="702"/>
+            <point key="canvasLocation" x="2958.5" y="791.5"/>
         </scene>
-        <!--Offers View Controller-->
+        <!--Offers-->
         <scene sceneID="Wut-8B-Xnk">
             <objects>
                 <viewController id="Wjh-sq-DMo" customClass="OffersViewController" customModule="BookMart" customModuleProvider="target" sceneMemberID="viewController">
@@ -209,7 +218,10 @@
                             <constraint firstAttribute="bottom" secondItem="DfB-Au-mXF" secondAttribute="bottom" id="cfq-8u-gzO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Q3H-fF-p5K"/>
+                    <navigationItem key="navigationItem" title="Offers" id="Q3H-fF-p5K"/>
+                    <connections>
+                        <outlet property="navBar" destination="Q3H-fF-p5K" id="ws6-JU-JU6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWz-nX-xg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -236,13 +248,16 @@
         <!--Item 1-->
         <scene sceneID="UGX-6L-UNP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FCX-ln-mp7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FCX-ln-mp7" customClass="NavigationController" customModule="BookMart" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item 1" id="ncJ-rY-PeA"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oas-TC-b3R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -256,9 +271,10 @@
         <!--Item 2-->
         <scene sceneID="kgk-Xr-bNd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PgD-b8-J0d" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PgD-b8-J0d" customClass="NavigationController" customModule="BookMart" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item 2" id="m4u-pD-f5y"/>
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cDm-2l-pyy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -276,4 +292,7 @@
     <resources>
         <image name="Background_books" width="375" height="667"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JPq-K3-zz1"/>
+    </inferredMetricsTieBreakers>
 </document>
