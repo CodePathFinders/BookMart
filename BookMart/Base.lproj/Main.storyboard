@@ -162,23 +162,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2u-Jf-tUM">
-                                <rect key="frame" x="155" y="269" width="46" height="30"/>
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="Wjh-sq-DMo" kind="show" id="OzO-HP-oTL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3f-Hi-96a">
+                                <rect key="frame" x="143" y="236" width="35" height="30"/>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <action selector="onScan:" destination="0gN-z8-BEw" eventType="touchUpInside" id="ATl-lR-AtT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kn-k8-1Yv">
+                                <rect key="frame" x="65" y="109" width="190" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ez-DO-bH0">
+                                <rect key="frame" x="40" y="317" width="240" height="166"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Hh-op-qSS"/>
                     <connections>
+                        <outlet property="resultImage" destination="6Ez-DO-bH0" id="vPa-LS-kyB"/>
+                        <outlet property="resultText" destination="4kn-k8-1Yv" id="5kt-AV-snl"/>
                         <segue destination="FCX-ln-mp7" kind="show" identifier="showOffers" id="p9J-AZ-zbo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVb-BI-Pk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2958.5" y="791.5"/>
+            <point key="canvasLocation" x="2958" y="791"/>
         </scene>
         <!--Offers-->
         <scene sceneID="Wut-8B-Xnk">
@@ -293,6 +310,6 @@
         <image name="Background_books" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JPq-K3-zz1"/>
+        <segue reference="OzO-HP-oTL"/>
     </inferredMetricsTieBreakers>
 </document>

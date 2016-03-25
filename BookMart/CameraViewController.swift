@@ -7,20 +7,79 @@
 //
 
 import UIKit
+import ZBarSDK
 
-class CameraViewController: UIViewController {
+extension ZBarSymbolSet: SequenceType {
+    public func generate() -> NSFastGenerator {
+        return NSFastGenerator(self)
+    }
+}
 
+class CameraViewController: UIViewController, ZBarReaderDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    
+    var ZBarReader: ZBarReaderViewController?
+    
+    @IBOutlet weak var resultText: UITextField!
+    @IBOutlet weak var resultImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.resultText.delegate = self
+        // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    @IBAction func onScan(sender: AnyObject) {
+        if (self.ZBarReader == nil) {
+            self.ZBarReader = ZBarReaderViewController()
+            print("itworks")
+        }
+        
+        //self.ZBarReader = ZBarReaderViewController()
+        self.ZBarReader?.readerDelegate = self
+        self.ZBarReader?.scanner.setSymbology(ZBAR_UPCA, config: ZBAR_CFG_ENABLE, to: 1)
+        self.ZBarReader?.readerView.zoom = 1.0
+        self.ZBarReader?.modalInPopover = false
+        self.ZBarReader?.showsZBarControls = false
+        //navigationController?.pushViewController(self.ZBarReader!, animated:true)
+        self.presentViewController(self.ZBarReader!, animated: true, completion: nil)
+        print("makesithere")
+        
+        
+        //reader.supportedOrientationsMask = ZBarOrientationMaskAll //can't get #define to work in swift
+        
+        /*UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation
+        
+        if (UIDeviceOrientationLandscapeLeft == orientation) {
+        //Rotate 90
+        reader.cameraViewTransform = CGAffineTransformMakeRotation (3*M_PI/2.0);
+        } else if (UIDeviceOrientationLandscapeRight == orientation) {
+        //Rotate 270
+        reader.cameraViewTransform = CGAffineTransformMakeRotation (M_PI/2.0);
+        }*/
+    }
     
+    func imagePickerController(reader: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+            // ADD: get the decode results
+            let results: NSFastEnumeration = info[ZBarReaderControllerResults] as! NSFastEnumeration
+            
+            var symbolFound : ZBarSymbol?
+            
+            for symbol in results as! ZBarSymbolSet {
+                symbolFound = symbol as? ZBarSymbol
+                break
+            }
+            let resultString = NSString(string: symbolFound!.data)
+            self.resultText.text = resultString as String    //set barCode
+            self.resultImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            
+            dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

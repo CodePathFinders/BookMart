@@ -8,5 +8,6 @@ target 'BookMart' do
 	pod 'AFNetworking'
 	pod 'SVProgressHUD'
 	pod "OAuthSwift", "~> 0.5.0"
+    pod 'ZBarSDK', '~> 1.3’
 end
 

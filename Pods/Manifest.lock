@@ -15,16 +15,22 @@ PODS:
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
   - Firebase (2.5.1)
+  - OAuthSwift (0.5.1)
   - SVProgressHUD (1.1.3)
+  - ZBarSDK (1.3.1)
 
 DEPENDENCIES:
   - AFNetworking
   - Firebase (>= 2.5.0)
+  - OAuthSwift (~> 0.5.0)
   - SVProgressHUD
+  - ZBarSDK (~> 1.3)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  OAuthSwift: d63f7f329f49787319a7e35974c18b10865fe636
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
 
 COCOAPODS: 0.39.0
