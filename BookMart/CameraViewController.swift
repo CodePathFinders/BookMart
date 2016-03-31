@@ -41,7 +41,7 @@ class CameraViewController: UIViewController, ZBarReaderDelegate, UIImagePickerC
         
         //self.ZBarReader = ZBarReaderViewController()
         self.ZBarReader?.readerDelegate = self
-        self.ZBarReader?.scanner.setSymbology(ZBAR_UPCA, config: ZBAR_CFG_ENABLE, to: 1)
+        self.ZBarReader?.scanner.setSymbology(ZBAR_ISBN13, config: ZBAR_CFG_ENABLE, to: 1)
         self.ZBarReader?.readerView.zoom = 1.0
         self.ZBarReader?.modalInPopover = false
         self.ZBarReader?.showsZBarControls = false
