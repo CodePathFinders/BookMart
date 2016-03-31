@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-BookMart/AFNetworking.framework"
+  install_framework "Pods-BookMart/Alamofire.framework"
   install_framework "Pods-BookMart/Firebase.framework"
   install_framework "Pods-BookMart/OAuthSwift.framework"
   install_framework "Pods-BookMart/SVProgressHUD.framework"
@@ -92,6 +93,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-BookMart/AFNetworking.framework"
+  install_framework "Pods-BookMart/Alamofire.framework"
   install_framework "Pods-BookMart/Firebase.framework"
   install_framework "Pods-BookMart/OAuthSwift.framework"
   install_framework "Pods-BookMart/SVProgressHUD.framework"
