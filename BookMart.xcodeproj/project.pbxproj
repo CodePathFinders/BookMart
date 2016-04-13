@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		116900DC1CBDD52800D1AAA2 /* Offers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116900DA1CBDD52800D1AAA2 /* Offers.storyboard */; };
+		116900DE1CBDD56E00D1AAA2 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116900DD1CBDD56E00D1AAA2 /* Camera.storyboard */; };
 		40247A1C1CACE85A0099BAAF /* ISBNSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40247A1B1CACE85A0099BAAF /* ISBNSearchAPI.swift */; };
 		4037615B1C967BA600F45396 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40B764791C964150009B1E74 /* Lato-Black.ttf */; };
 		4037615F1C967C0800F45396 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40B7647A1C964150009B1E74 /* Lato-BlackItalic.ttf */; };
@@ -45,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		116900DB1CBDD52800D1AAA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Offers.storyboard; sourceTree = "<group>"; };
+		116900DD1CBDD56E00D1AAA2 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		40247A1B1CACE85A0099BAAF /* ISBNSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISBNSearchAPI.swift; sourceTree = "<group>"; };
 		4037615D1C967BD300F45396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Lato-Regular.ttf"; sourceTree = "<group>"; };
 		408E384A1CBDC681003ACFBB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				40B7646D1C923CDC009B1E74 /* View Controllers */,
 				40B764581C9239E9009B1E74 /* AppDelegate.swift */,
 				40B7645C1C9239E9009B1E74 /* Main.storyboard */,
+				116900DD1CBDD56E00D1AAA2 /* Camera.storyboard */,
+				116900DA1CBDD52800D1AAA2 /* Offers.storyboard */,
 				40B764621C9239E9009B1E74 /* Assets.xcassets */,
 				40B764641C9239E9009B1E74 /* LaunchScreen.storyboard */,
 				40B764671C9239E9009B1E74 /* Info.plist */,
@@ -272,11 +278,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				403761621C967C2200F45396 /* Lato-Hairline.ttf in Resources */,
+				116900DE1CBDD56E00D1AAA2 /* Camera.storyboard in Resources */,
 				4037615F1C967C0800F45396 /* Lato-BlackItalic.ttf in Resources */,
 				4037616D1C967C4100F45396 /* Lato-SemiboldItalic.ttf in Resources */,
 				403761691C967C3400F45396 /* Lato-Medium.ttf in Resources */,
 				403761671C967C2F00F45396 /* Lato-Light.ttf in Resources */,
 				403761661C967C2C00F45396 /* Lato-Italic.ttf in Resources */,
+				116900DC1CBDD52800D1AAA2 /* Offers.storyboard in Resources */,
 				40B764661C9239E9009B1E74 /* LaunchScreen.storyboard in Resources */,
 				4037616F1C967C4700F45396 /* Lato-ThinItalic.ttf in Resources */,
 				403761631C967C2400F45396 /* Lato-HairlineItalic.ttf in Resources */,
@@ -369,6 +377,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		116900DA1CBDD52800D1AAA2 /* Offers.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				116900DB1CBDD52800D1AAA2 /* Base */,
+			);
+			name = Offers.storyboard;
+			sourceTree = "<group>";
+		};
 		4037615E1C967BD300F45396 /* Lato-Regular.ttf */ = {
 			isa = PBXVariantGroup;
 			children = (
