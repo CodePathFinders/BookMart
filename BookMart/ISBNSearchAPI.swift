@@ -11,7 +11,7 @@ import Alamofire
 
 class ISBNSearchAPI {
     
-    static let urlString = "www.isbnsearch.org/isbn/";
+    static let urlString = "http://www.isbnsearch.org/isbn/";
     
     // assumes valid ISBN (error handling done in CameraVC)
     class func getInfo(ISBN: String, success: (NSURLRequest?, NSHTTPURLResponse?, NSData?) -> (), failure: (NSError?)->()) {

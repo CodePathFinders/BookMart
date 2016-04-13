@@ -26,6 +26,7 @@
 		4037616D1C967C4100F45396 /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40B764881C964150009B1E74 /* Lato-SemiboldItalic.ttf */; };
 		4037616E1C967C4300F45396 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40B764891C964150009B1E74 /* Lato-Thin.ttf */; };
 		4037616F1C967C4700F45396 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40B7648A1C964150009B1E74 /* Lato-ThinItalic.ttf */; };
+		408E384B1CBDC681003ACFBB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408E384A1CBDC681003ACFBB /* ProfileViewController.swift */; };
 		40B764591C9239E9009B1E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B764581C9239E9009B1E74 /* AppDelegate.swift */; };
 		40B7645B1C9239E9009B1E74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B7645A1C9239E9009B1E74 /* LoginViewController.swift */; };
 		40B7645E1C9239E9009B1E74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B7645C1C9239E9009B1E74 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		40247A1B1CACE85A0099BAAF /* ISBNSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISBNSearchAPI.swift; sourceTree = "<group>"; };
 		4037615D1C967BD300F45396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		408E384A1CBDC681003ACFBB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		40B764551C9239E9009B1E74 /* BookMart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookMart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B764581C9239E9009B1E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40B7645A1C9239E9009B1E74 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				40B7646E1C923D01009B1E74 /* CameraViewController.swift */,
 				40B764701C923D1C009B1E74 /* OffersViewController.swift */,
 				40B764721C924048009B1E74 /* OfferDetailViewController.swift */,
+				408E384A1CBDC681003ACFBB /* ProfileViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				40B7646F1C923D01009B1E74 /* CameraViewController.swift in Sources */,
 				40B7645B1C9239E9009B1E74 /* LoginViewController.swift in Sources */,
 				59032F781CBDB75B0072E56F /* User.swift in Sources */,
+				408E384B1CBDC681003ACFBB /* ProfileViewController.swift in Sources */,
 				40B764591C9239E9009B1E74 /* AppDelegate.swift in Sources */,
 				59032F7C1CBDB7770072E56F /* Offer.swift in Sources */,
 				590F9A6F1CA38D1F00A1F73A /* NavigationController.swift in Sources */,
