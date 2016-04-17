@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import Kanna
 
 class ISBNSearchAPI {
     
@@ -22,6 +23,41 @@ class ISBNSearchAPI {
             } else {
                 success(request, response, data)
             }
+        }
+    }
+    
+    class func parse(htmlString: String, userToAdd: User) -> (Book?) {
+        if let doc = Kanna.HTML(html: htmlString, encoding: NSUTF8StringEncoding) {
+            print(doc.title)
+            
+            //image URL
+            let imgURL = doc.css("#book .thumbnail img")[0]["src"]
+            print("Image URL: \(imgURL)")
+            
+            //book info
+            var count = 0;
+            var isbn = "";
+            var authors = "";
+            for p in doc.css("#book .bookinfo p") {
+                if count == 1 {
+                    isbn = (p.text?.componentsSeparatedByString(":")[1])!
+                } else if count == 2 {
+                    authors = (p.text?.componentsSeparatedByString(":")[1])!
+                }
+                print("Text: \(p.text?.componentsSeparatedByString(":")[1])");
+                count += 1;
+            }
+            
+            let title = doc.css("#book .bookinfo h2")[0].text;
+            
+            // check if book exists, if so, add User to array of Users in object
+            
+            // else create new book object with User as only member of array
+            let newBook = Book(title: title!, imageURL: imgURL, isbn: isbn, authors: authors)
+            newBook.users.append(userToAdd);
+            return newBook;
+        } else {
+            return nil
         }
     }
 }

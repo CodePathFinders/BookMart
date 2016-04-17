@@ -17,7 +17,7 @@ class NavigationController: UINavigationController {
         self.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationBar.barStyle = .Black
         self.navigationBar.titleTextAttributes = [
-            NSFontAttributeName : UIFont(name: "Lato-Medium", size: 24)!,
+            NSFontAttributeName : UIFont(name: "Lato-Medium", size: 20)!,
             NSForegroundColorAttributeName : UIColor.whiteColor()
         ]
         // Do any additional setup after loading the view.

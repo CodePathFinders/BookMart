@@ -8,14 +8,27 @@
 
 import UIKit
 
-class OffersViewController: UIViewController {
+class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
 
     @IBOutlet weak var navBar: UINavigationItem!
+    @IBOutlet var tableView: UITableView!
+    
+    var data = []
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("offerCell");
+        return cell!
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1;
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
     }
 

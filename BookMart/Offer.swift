@@ -2,9 +2,9 @@
 //  Offer.swift
 //  BookMart
 //  
-//  The Offer
+//  The Offer object is the lowest level object in the hierarchy.
 //
-//  Created by Nav Saini on 4/12/16.
+//  Created by Pranav Harathi on 4/12/16.
 //  Copyright © 2016 CodePathFinders. All rights reserved.
 //
 

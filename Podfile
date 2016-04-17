@@ -10,5 +10,6 @@ target 'BookMart' do
 	pod "OAuthSwift", "~> 0.5.0"
     pod 'ZBarSDK', '~> 1.3’
     pod 'Alamofire', '~> 3.0'
+    pod 'Kanna', '~> 1.0.0'
 end
 

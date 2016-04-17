@@ -17,23 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        /*
-        for family: String in UIFont.familyNames()
-        {
-            print("\(family)")
-            for names: String in UIFont.fontNamesForFamilyName(family)
-            {
-                print("== \(names)")
-            }
-        }*/
-        
-        ISBNSearchAPI.getInfo("9781939512031", success: { (request, response, data) in
-            //print(data)
-            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
-            }) { (error) in
-                print(error)
-        }
 
         return true
     }
