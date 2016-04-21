@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,34 +30,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func onSignup(sender: AnyObject) {
-        //checks if valid email and checks if utexas email
-        let url: NSURL? =  NSURL(string: verification + emailField.text!)!
-        let dataTask = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
-            if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? NSDictionary {
-                if (responseDictionary["domain"] as? String != "utexas.edu") {
-                    print("Please enter a valid UT email")
-                }
-                else if (Double(responseDictionary["score"] as! Double) < 0.8) {
-                    print("Please enter a valid email")
-                }
-                else {
-                    self.firebase.createUser(self.emailField.text, password: self.passwordField.text, withValueCompletionBlock: {error, result in
-                    if error != nil {
-                            print("There was an error creating the account")
-                    } else {
-                            let uid = result["uid"] as? String
-                            print("Successfully created user account with uid: \(uid)")
-                            self.onLogin(sender)
-                        }
-                    })
-                }
-            }
-
-        })
-        dataTask.resume()
-        
-    }
     
     @IBAction func onLogin(sender: AnyObject) {
         firebase.authUser(emailField.text, password: passwordField.text, withCompletionBlock: {error, authData in
@@ -71,6 +42,7 @@ class ViewController: UIViewController {
             }
         })
     }
+   
     
     
     @IBAction func onForgot(sender: AnyObject) {

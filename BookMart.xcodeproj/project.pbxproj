@@ -44,6 +44,7 @@
 		59032F7A1CBDB76C0072E56F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59032F791CBDB76C0072E56F /* Book.swift */; };
 		59032F7C1CBDB7770072E56F /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59032F7B1CBDB7770072E56F /* Offer.swift */; };
 		590F9A6F1CA38D1F00A1F73A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590F9A6E1CA38D1F00A1F73A /* NavigationController.swift */; };
+		59A5F1B41CC881FA00AF42A8 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5F1B31CC881FA00AF42A8 /* EditProfileViewController.swift */; };
 		E7330317D83AA861E6DB4D75 /* Pods_BookMart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AB333456D3AF8A410A9623 /* Pods_BookMart.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		59032F791CBDB76C0072E56F /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		59032F7B1CBDB7770072E56F /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		590F9A6E1CA38D1F00A1F73A /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		59A5F1B31CC881FA00AF42A8 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		91AB333456D3AF8A410A9623 /* Pods_BookMart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookMart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B78CD95DE14F9D13444D520 /* Pods-BookMart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMart.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookMart/Pods-BookMart.release.xcconfig"; sourceTree = "<group>"; };
 		F355A9D85F774E71AA04742F /* Pods-BookMart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookMart/Pods-BookMart.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				40B7645A1C9239E9009B1E74 /* LoginViewController.swift */,
+				59A5F1B31CC881FA00AF42A8 /* EditProfileViewController.swift */,
 				40B7646E1C923D01009B1E74 /* CameraViewController.swift */,
 				40B764701C923D1C009B1E74 /* OffersViewController.swift */,
 				40B764721C924048009B1E74 /* OfferDetailViewController.swift */,
@@ -368,6 +371,7 @@
 				40B7646F1C923D01009B1E74 /* CameraViewController.swift in Sources */,
 				40B7645B1C9239E9009B1E74 /* LoginViewController.swift in Sources */,
 				59032F781CBDB75B0072E56F /* User.swift in Sources */,
+				59A5F1B41CC881FA00AF42A8 /* EditProfileViewController.swift in Sources */,
 				408E384B1CBDC681003ACFBB /* ProfileViewController.swift in Sources */,
 				40B764591C9239E9009B1E74 /* AppDelegate.swift in Sources */,
 				59032F7C1CBDB7770072E56F /* Offer.swift in Sources */,
