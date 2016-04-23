@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		116900DC1CBDD52800D1AAA2 /* Offers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116900DA1CBDD52800D1AAA2 /* Offers.storyboard */; };
 		116900DE1CBDD56E00D1AAA2 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116900DD1CBDD56E00D1AAA2 /* Camera.storyboard */; };
+		11E87FCA1CCAE52B00DCFB80 /* OffersPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E87FC91CCAE52B00DCFB80 /* OffersPageViewController.swift */; };
 		400D17D01CC00F1B00BAC5D3 /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400D17CF1CC00F1B00BAC5D3 /* OfferCell.swift */; };
 		40247A1C1CACE85A0099BAAF /* ISBNSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40247A1B1CACE85A0099BAAF /* ISBNSearchAPI.swift */; };
 		4037615B1C967BA600F45396 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40B764791C964150009B1E74 /* Lato-Black.ttf */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		116900DB1CBDD52800D1AAA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Offers.storyboard; sourceTree = "<group>"; };
 		116900DD1CBDD56E00D1AAA2 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		11E87FC91CCAE52B00DCFB80 /* OffersPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersPageViewController.swift; sourceTree = "<group>"; };
 		400D17CF1CC00F1B00BAC5D3 /* OfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
 		40247A1B1CACE85A0099BAAF /* ISBNSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISBNSearchAPI.swift; sourceTree = "<group>"; };
 		4037615D1C967BD300F45396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Lato-Regular.ttf"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				590F9A6E1CA38D1F00A1F73A /* NavigationController.swift */,
 				400D17CF1CC00F1B00BAC5D3 /* OfferCell.swift */,
+				11E87FC91CCAE52B00DCFB80 /* OffersPageViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				40B7646F1C923D01009B1E74 /* CameraViewController.swift in Sources */,
 				40B7645B1C9239E9009B1E74 /* LoginViewController.swift in Sources */,
 				59032F781CBDB75B0072E56F /* User.swift in Sources */,
+				11E87FCA1CCAE52B00DCFB80 /* OffersPageViewController.swift in Sources */,
 				59A5F1B41CC881FA00AF42A8 /* EditProfileViewController.swift in Sources */,
 				408E384B1CBDC681003ACFBB /* ProfileViewController.swift in Sources */,
 				40B764591C9239E9009B1E74 /* AppDelegate.swift in Sources */,
