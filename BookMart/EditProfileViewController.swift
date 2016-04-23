@@ -57,6 +57,7 @@ class EditProfileViewController: UIViewController {
                             self.usersRef?.childByAppendingPath(uid).setValue(info)
                         }
                     })
+                    
                 }
             }
             
