@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xgt-9b-i5Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Dbe-3C-KIs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -209,6 +209,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8k-d3-nlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="932" y="-44"/>
+        </scene>
+        <!--Page Control View Controller-->
+        <scene sceneID="j2q-vb-oIP">
+            <objects>
+                <viewController id="Dbe-3C-KIs" customClass="PageControlViewController" customModule="BookMart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bEx-wT-AED"/>
+                        <viewControllerLayoutGuide type="bottom" id="vbL-6B-EMQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hrp-0Z-Bx7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xea-1R-hLO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <segue destination="Xgt-9b-i5Z" kind="embed" id="Pkz-Xl-vOJ"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Xh-jC-s6h">
+                                <rect key="frame" x="141" y="489" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.38492734261446404" green="0.25314938225605588" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.5672275187416953" green="0.59136864567654768" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xea-1R-hLO" secondAttribute="trailing" id="7yo-62-G86"/>
+                            <constraint firstItem="7Xh-jC-s6h" firstAttribute="leading" secondItem="hrp-0Z-Bx7" secondAttribute="leading" constant="141" id="FqV-NR-b8m"/>
+                            <constraint firstItem="xea-1R-hLO" firstAttribute="leading" secondItem="hrp-0Z-Bx7" secondAttribute="leading" id="M7g-zr-nVo"/>
+                            <constraint firstItem="xea-1R-hLO" firstAttribute="top" secondItem="hrp-0Z-Bx7" secondAttribute="top" id="Nrr-Oj-RMO"/>
+                            <constraint firstAttribute="trailing" secondItem="7Xh-jC-s6h" secondAttribute="trailing" constant="140" id="VRz-m5-rMJ"/>
+                            <constraint firstItem="vbL-6B-EMQ" firstAttribute="top" secondItem="xea-1R-hLO" secondAttribute="bottom" id="Wt1-pO-ybw"/>
+                            <constraint firstItem="vbL-6B-EMQ" firstAttribute="top" secondItem="7Xh-jC-s6h" secondAttribute="bottom" constant="42" id="tMK-xL-bcS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="xea-1R-hLO" id="rKg-tZ-gmT"/>
+                        <outlet property="pageDots" destination="7Xh-jC-s6h" id="1Ze-Ji-rF0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQg-Cv-5Sv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="526" y="613"/>
         </scene>
         <!--CameraViewController-->
         <scene sceneID="Wzy-sL-KjT">

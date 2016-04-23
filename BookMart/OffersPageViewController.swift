@@ -10,6 +10,8 @@ import UIKit
 
 class OffersPageViewController: UIPageViewController {
     
+    weak var pageDelegate: OffersPageViewControllerDelegate?
+    
     private (set) lazy var orderedViewControllers: [UIViewController] = {
         
         return [self.newColoredViewController("Profile"),
@@ -28,6 +30,9 @@ class OffersPageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
+        delegate = self
+        
+        pageDelegate?.offersPageViewController(self, didUpdatePageCount: orderedViewControllers.count)
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([orderedViewControllers[1]], direction: .Forward, animated: true, completion: nil)
@@ -92,4 +97,23 @@ extension OffersPageViewController: UIPageViewControllerDataSource {
         
         return orderedViewControllers[nextIndex]
     }
+}
+
+extension OffersPageViewController: UIPageViewControllerDelegate {
+    
+    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if let firstViewController = viewControllers?.first,
+            let index = orderedViewControllers.indexOf(firstViewController) {
+                pageDelegate?.offersPageViewController(self, didUpdatePageIndex: index)
+        }
+        
+    }
+}
+
+protocol OffersPageViewControllerDelegate: class {
+    
+    func offersPageViewController(offersPageViewController: OffersPageViewController, didUpdatePageCount count: Int)
+    
+    func offersPageViewController(offersPageViewController: OffersPageViewController,
+        didUpdatePageIndex count: Int)
 }
