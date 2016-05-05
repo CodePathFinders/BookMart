@@ -48,6 +48,7 @@ class EditProfileViewController: UIViewController {
                             print("There was an error creating the account")
                         } else {
                             let uid = result["uid"] as? String
+                            NSUserDefaults.standardUserDefaults().setValue(result["uid"], forKey: "uid")
                             print("Successfully created user account with uid: \(uid)")
                             let info = [
                                 "name": self.nameField.text!,

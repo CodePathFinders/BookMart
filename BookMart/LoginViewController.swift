@@ -20,9 +20,21 @@ class ViewController: UIViewController {
     let firebase = Firebase(url: "https://glowing-fire-6824.firebaseio.com/")
     let verification = "http://apilayer.net/api/check?access_key=b563ec350246bc5e1688fc6ae41da82f&email="
     
+    var usersRef: Firebase?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        usersRef = firebase.childByAppendingPath("users")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && usersRef?.authData != nil {
+            self.performSegueWithIdentifier("loginSegue", sender: nil)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +50,7 @@ class ViewController: UIViewController {
             } else {
                 let uid = authData.uid
                 print("Successfully logged in user with uid: \(uid)")
+                NSUserDefaults.standardUserDefaults().setValue(uid, forKey: "uid")
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
             }
         })
