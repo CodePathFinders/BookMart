@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         
         if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && usersRef?.authData != nil {
             self.performSegueWithIdentifier("loginSegue", sender: nil)
+            
         }
         
     }

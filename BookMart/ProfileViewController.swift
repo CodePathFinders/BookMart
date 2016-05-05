@@ -7,13 +7,33 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController {
+    
+    let firebase = Firebase(url: "https://glowing-fire-6824.firebaseio.com/")
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    var usersRef: Firebase?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        usersRef = firebase.childByAppendingPath("users")
+        let uid = NSUserDefaults.standardUserDefaults().objectForKey("uid") as? String
+        usersRef!.observeEventType(.Value, withBlock: {snapshot in
+            self.nameLabel.text = snapshot.value[uid!]!!["name"] as? String
+            self.phoneLabel.text = snapshot.value[uid!]!!["phone"] as? String
+            self.emailLabel.text = snapshot.value[uid!]!!["email"] as? String
+        }, withCancelBlock: { error in
+            print(error.description)
+        })
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
