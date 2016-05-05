@@ -19,7 +19,8 @@ class EditProfileViewController: UIViewController {
     let firebase = Firebase(url: "https://glowing-fire-6824.firebaseio.com/")
     let verification = "http://apilayer.net/api/check?access_key=b563ec350246bc5e1688fc6ae41da82f&email="
     
-     var usersRef: Firebase?
+    var usersRef: Firebase?
+    var signUpSuccess: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,7 @@ class EditProfileViewController: UIViewController {
                                 "phone": self.phoneField.text!
                             ]
                             self.usersRef?.childByAppendingPath(uid).setValue(info)
+                            self.signUpSuccess = true
                         }
                     })
                     
@@ -68,12 +70,20 @@ class EditProfileViewController: UIViewController {
 
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        
     }
     */
-
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
+        if !signUpSuccess {
+            return false
+        }
+        return true
+    }
 }
