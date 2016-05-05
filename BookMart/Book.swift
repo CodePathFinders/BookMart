@@ -8,15 +8,19 @@
 
 import UIKit
 
+struct Books {
+    var list: [Book] = []
+}
+
 class Book: NSObject {
     var title: String!
     var imageURL: String?
     var isbn: String!
     var authors: String!
-    var users: [User] = []
+    private var offers: [Offer] = []
     
     override var description: String {
-        return "Book { title: \(self.title), imageURL: \(self.imageURL ?? "None"), isbn: \(isbn), authors: \(authors), users: \(users)"
+        return "Book { title: \(self.title), imageURL: \(self.imageURL ?? "None"), isbn: \(isbn), authors: \(authors), offers: \(offers)"
     }
     
     init(title: String, imageURL: String?, isbn: String, authors: String) {
@@ -24,5 +28,13 @@ class Book: NSObject {
         self.imageURL = imageURL
         self.authors = authors
         self.isbn = isbn
+    }
+    
+    func addOffer(offer: Offer) {
+        offers.append(offer);
+    }
+    
+    func addOffers(offers: [Offer]) {
+        self.offers.appendContentsOf(offers)
     }
 }

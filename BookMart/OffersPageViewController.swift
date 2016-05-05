@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct ViewControllers {
+    static var pageViewController: OffersPageViewController!
+}
+
 class OffersPageViewController: UIPageViewController {
     
     weak var pageDelegate: OffersPageViewControllerDelegate?
@@ -22,15 +26,23 @@ class OffersPageViewController: UIPageViewController {
     private func newColoredViewController(color: String) -> UIViewController {
         if(color == "Profile"){
             return UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ProfileViewController")
-        }else{
+        } else if(color=="Offers") {
+            return UIStoryboard(name: color, bundle: nil).instantiateViewControllerWithIdentifier("navController")
+        } else {
             return UIStoryboard(name: color, bundle: nil).instantiateViewControllerWithIdentifier("\(color)ViewController")
         }
+    }
+    
+    func goToCamera() {
+        self.setViewControllers([orderedViewControllers[2]], direction: .Forward, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
         delegate = self
+        
+        ViewControllers.pageViewController = self
         
         pageDelegate?.offersPageViewController(self, didUpdatePageCount: orderedViewControllers.count)
         
@@ -53,8 +65,10 @@ class OffersPageViewController: UIPageViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        }
     }
     */
+    
 
 }
 

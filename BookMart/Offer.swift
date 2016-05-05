@@ -11,7 +11,13 @@
 import UIKit
 
 class Offer: NSObject {
-    var price: Int!
+    var price: Double!
     var user: User!
     var book: Book!
+    
+    init(price: Double, user: User, book: Book) {
+        self.price = price
+        self.user = user
+        self.book = book
+    }
 }

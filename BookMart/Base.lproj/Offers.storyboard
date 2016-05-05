@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Dbe-3C-KIs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Dbe-3C-KIs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Lato-Bold.ttf">
@@ -33,43 +34,43 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DfB-Au-mXF">
-                                <rect key="frame" x="0.0" y="44" width="375" height="559"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DfB-Au-mXF">
+                                <rect key="frame" x="0.0" y="49" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="114" id="GbR-Um-gLI" customClass="OfferCell" customModule="BookMart" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="114"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="120" id="GbR-Um-gLI" customClass="OfferCell" customModule="BookMart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GbR-Um-gLI" id="jkx-Wa-iU0">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="113.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalHuggingPriority="251" tableViewCell="GbR-Um-gLI" id="jkx-Wa-iU0">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YOL-sI-bsX">
-                                                    <rect key="frame" x="8" y="8" width="82" height="97"/>
+                                                    <rect key="frame" x="8" y="11.5" width="82" height="97"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="82" id="bH3-QV-wfP"/>
                                                         <constraint firstAttribute="height" constant="97" id="m9u-te-N13"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ordinary Differential Equations and their applications" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVG-1Q-Qp3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Morris Tenenbaum; Harry Pollard; Mathematics" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jei-EG-mQ8">
+                                                    <rect key="frame" x="98" y="38" width="244" height="29"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="751" text="Ordinary Differential Equations and their applications" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVG-1Q-Qp3">
                                                     <rect key="frame" x="98" y="0.0" width="244" height="36"/>
                                                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 sellers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHq-fC-kOw">
-                                                    <rect key="frame" x="98" y="91" width="44" height="15"/>
+                                                    <rect key="frame" x="98" y="91" width="44" height="17"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morris Tenenbaum; Harry Pollard; Mathematics" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jei-EG-mQ8">
-                                                    <rect key="frame" x="98" y="38" width="244" height="29"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYz-mM-S4e">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" text="$100.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYz-mM-S4e">
                                                     <rect key="frame" x="98" y="69" width="64" height="21"/>
                                                     <fontDescription key="fontDescription" name="Lato-MediumItalic" family="Lato" pointSize="17"/>
                                                     <color key="textColor" red="0.94117647059999998" green="0.27058823529999998" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,7 +81,7 @@
                                                 <constraint firstItem="zHq-fC-kOw" firstAttribute="leading" secondItem="YOL-sI-bsX" secondAttribute="trailing" constant="8" id="1TR-10-7q7"/>
                                                 <constraint firstItem="jei-EG-mQ8" firstAttribute="leading" secondItem="YOL-sI-bsX" secondAttribute="trailing" constant="8" id="2Bo-sv-jhy"/>
                                                 <constraint firstAttribute="trailing" secondItem="lVG-1Q-Qp3" secondAttribute="trailing" id="6f1-Sw-lq7"/>
-                                                <constraint firstItem="jei-EG-mQ8" firstAttribute="top" secondItem="lVG-1Q-Qp3" secondAttribute="bottom" constant="1.5" id="7x6-5f-LmH"/>
+                                                <constraint firstItem="jei-EG-mQ8" firstAttribute="top" secondItem="lVG-1Q-Qp3" secondAttribute="bottom" constant="2" id="7x6-5f-LmH"/>
                                                 <constraint firstItem="YOL-sI-bsX" firstAttribute="leading" secondItem="jkx-Wa-iU0" secondAttribute="leading" constant="8" id="8FK-oZ-wYr"/>
                                                 <constraint firstItem="FYz-mM-S4e" firstAttribute="leading" secondItem="YOL-sI-bsX" secondAttribute="trailing" constant="8" id="JbZ-B3-8us"/>
                                                 <constraint firstItem="lVG-1Q-Qp3" firstAttribute="top" secondItem="jkx-Wa-iU0" secondAttribute="top" id="QrK-cQ-2u8"/>
@@ -89,9 +90,15 @@
                                                 <constraint firstItem="FYz-mM-S4e" firstAttribute="top" secondItem="jei-EG-mQ8" secondAttribute="bottom" constant="2" id="Tgd-SU-onq"/>
                                                 <constraint firstAttribute="trailing" secondItem="jei-EG-mQ8" secondAttribute="trailing" id="cSk-Qd-YRK"/>
                                                 <constraint firstItem="zHq-fC-kOw" firstAttribute="top" secondItem="FYz-mM-S4e" secondAttribute="bottom" constant="1" id="jtd-bT-XfK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zHq-fC-kOw" secondAttribute="bottom" constant="4" id="x6y-Kn-lqG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="authorsLabel" destination="jei-EG-mQ8" id="hna-Au-D1N"/>
+                                            <outlet property="bookImageView" destination="YOL-sI-bsX" id="mLI-Ol-2DJ"/>
+                                            <outlet property="lowestPriceLabel" destination="FYz-mM-S4e" id="m4m-dO-Uua"/>
+                                            <outlet property="numSellersLabel" destination="zHq-fC-kOw" id="AX4-VZ-Amu"/>
+                                            <outlet property="titleLabel" destination="lVG-1Q-Qp3" id="HoM-ou-AJ3"/>
                                             <segue destination="g0b-2A-4Da" kind="push" id="ag9-jk-zoC"/>
                                         </connections>
                                     </tableViewCell>
@@ -101,17 +108,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DfB-Au-mXF" firstAttribute="leading" secondItem="2jE-Fw-XgR" secondAttribute="leading" id="1UD-gR-uVs"/>
-                            <constraint firstItem="DfB-Au-mXF" firstAttribute="top" secondItem="nQA-ia-Gbh" secondAttribute="bottom" id="Mem-Ql-kWL"/>
+                            <constraint firstItem="DfB-Au-mXF" firstAttribute="top" secondItem="nQA-ia-Gbh" secondAttribute="bottom" constant="5" id="Avx-Dm-J4x"/>
                             <constraint firstAttribute="trailing" secondItem="DfB-Au-mXF" secondAttribute="trailing" id="aXh-OP-obE"/>
                             <constraint firstAttribute="bottom" secondItem="DfB-Au-mXF" secondAttribute="bottom" id="cfq-8u-gzO"/>
                             <constraint firstAttribute="trailing" secondItem="nQA-ia-Gbh" secondAttribute="trailing" id="lIX-Mj-LsA"/>
-                            <constraint firstItem="DfB-Au-mXF" firstAttribute="top" secondItem="nQA-ia-Gbh" secondAttribute="bottom" id="lrB-SS-q6L"/>
-                            <constraint firstItem="nQA-ia-Gbh" firstAttribute="top" secondItem="V3C-EP-MWX" secondAttribute="bottom" id="ncP-WY-qdQ"/>
+                            <constraint firstItem="nQA-ia-Gbh" firstAttribute="top" secondItem="V3C-EP-MWX" secondAttribute="bottom" id="li6-PY-rzH"/>
                             <constraint firstItem="nQA-ia-Gbh" firstAttribute="leading" secondItem="2jE-Fw-XgR" secondAttribute="leading" id="o20-xW-bMn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Offers" id="Q3H-fF-p5K">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="H9G-bi-G4T"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="ddG-D5-V6W"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="H9G-bi-G4T">
+                            <connections>
+                                <action selector="onAdd:" destination="Wjh-sq-DMo" id="YEX-Lr-amM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -124,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWz-nX-xg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1468.5" y="5.5"/>
+            <point key="canvasLocation" x="2000.5" y="5.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fjL-OV-I08">
@@ -138,23 +149,12 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="evp-2j-Zc5">
-                                <rect key="frame" x="40" y="309" width="240" height="204"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="zxy-eG-lky">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zxy-eG-lky" id="g5e-Ls-DvW">
-                                            <rect key="frame" x="0.0" y="0.0" width="207" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="zdk-eR-5wn" kind="push" id="25F-KA-Me4"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5Z-Yz-IoA">
+                                <rect key="frame" x="164" y="222" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -162,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YjG-vN-fYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940.5" y="5.5"/>
+            <point key="canvasLocation" x="2472.5" y="5.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fKv-YW-aum">
@@ -173,7 +173,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qBd-TO-SDX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XwX-mv-Dxf">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -181,34 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMa-2p-tlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2403.5" y="5.5"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="UGX-6L-UNP">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FCX-ln-mp7" customClass="NavigationController" customModule="BookMart" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ncJ-rY-PeA"/>
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Oas-TC-b3R">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0060570464148859641" green="0.0060763888888888395" blue="0.0059088142295892166" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.0060570464149999996" green="0.0060763888889999998" blue="0.00590881423" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Wjh-sq-DMo" kind="relationship" relationship="rootViewController" id="JPq-K3-zz1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r8k-d3-nlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="932" y="-44"/>
+            <point key="canvasLocation" x="2935" y="5"/>
         </scene>
         <!--Page Control View Controller-->
         <scene sceneID="j2q-vb-oIP">
@@ -281,6 +254,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axZ-WK-G5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1284" y="835.43333333333328"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MEJ-vS-KWD">
+            <objects>
+                <navigationController storyboardIdentifier="navController" automaticallyAdjustsScrollViewInsets="NO" id="z1R-ro-62g" customClass="NavigationController" customModule="BookMart" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="e9X-bd-TR5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wjh-sq-DMo" kind="relationship" relationship="rootViewController" id="5w1-4i-ANI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfw-vK-lkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1468" y="5"/>
         </scene>
     </scenes>
 </document>

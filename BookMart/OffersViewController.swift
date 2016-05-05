@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
 
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet var tableView: UITableView!
+    
+    @IBAction func onAdd(sender: AnyObject) {
+        ViewControllers.pageViewController.goToCamera()
+    }
     
     var data = []
     
@@ -29,7 +34,17 @@ class OffersViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         self.automaticallyAdjustsScrollViewInsets = false
+        self.navigationController?.navigationBarHidden = false
+        tableView.estimatedRowHeight = 114
+        tableView.rowHeight = UITableViewAutomaticDimension
+
         // Do any additional setup after loading the view.
+        
+        let myRootRef = Firebase(url:"https://glowing-fire-6824.firebaseio.com/")
+        let booksRef = myRootRef.childByAppendingPath("books")
+        //booksRef.setValue(["booktest" : ["title" : "test"]])
+        
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -42,6 +42,7 @@
 		40B764711C923D1C009B1E74 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B764701C923D1C009B1E74 /* OffersViewController.swift */; };
 		40B764731C924048009B1E74 /* OfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B764721C924048009B1E74 /* OfferDetailViewController.swift */; };
 		40B7649E1C964150009B1E74 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 40B7648B1C964150009B1E74 /* OFL.txt */; };
+		40BF5C721CDB9C72003AD88E /* AddOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF5C711CDB9C72003AD88E /* AddOfferViewController.swift */; };
 		59032F781CBDB75B0072E56F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59032F771CBDB75B0072E56F /* User.swift */; };
 		59032F7A1CBDB76C0072E56F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59032F791CBDB76C0072E56F /* Book.swift */; };
 		59032F7C1CBDB7770072E56F /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59032F7B1CBDB7770072E56F /* Offer.swift */; };
@@ -88,6 +89,7 @@
 		40B764891C964150009B1E74 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
 		40B7648A1C964150009B1E74 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		40B7648B1C964150009B1E74 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		40BF5C711CDB9C72003AD88E /* AddOfferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOfferViewController.swift; sourceTree = "<group>"; };
 		59032F771CBDB75B0072E56F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		59032F791CBDB76C0072E56F /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		59032F7B1CBDB7770072E56F /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				40B764721C924048009B1E74 /* OfferDetailViewController.swift */,
 				408E384A1CBDC681003ACFBB /* ProfileViewController.swift */,
 				11E87FCB1CCAFCEA00DCFB80 /* PageControlViewController.swift */,
+				40BF5C711CDB9C72003AD88E /* AddOfferViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				40B7646F1C923D01009B1E74 /* CameraViewController.swift in Sources */,
 				40B7645B1C9239E9009B1E74 /* LoginViewController.swift in Sources */,
 				59032F781CBDB75B0072E56F /* User.swift in Sources */,
+				40BF5C721CDB9C72003AD88E /* AddOfferViewController.swift in Sources */,
 				11E87FCA1CCAE52B00DCFB80 /* OffersPageViewController.swift in Sources */,
 				11E87FCC1CCAFCEA00DCFB80 /* PageControlViewController.swift in Sources */,
 				59A5F1B41CC881FA00AF42A8 /* EditProfileViewController.swift in Sources */,

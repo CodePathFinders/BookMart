@@ -25,15 +25,12 @@ class ProfileViewController: UIViewController {
         usersRef = firebase.childByAppendingPath("users")
         let uid = NSUserDefaults.standardUserDefaults().objectForKey("uid") as? String
         usersRef!.observeEventType(.Value, withBlock: {snapshot in
-            self.nameLabel.text = snapshot.value[uid!]!!["name"] as? String
-            self.phoneLabel.text = snapshot.value[uid!]!!["phone"] as? String
-            self.emailLabel.text = snapshot.value[uid!]!!["email"] as? String
+            //self.nameLabel.text = snapshot.value[uid!]!!["name"] as? String
+            //self.phoneLabel.text = snapshot.value[uid!]!!["phone"] as? String
+            //self.emailLabel.text = snapshot.value[uid!]!!["email"] as? String
         }, withCancelBlock: { error in
             print(error.description)
         })
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

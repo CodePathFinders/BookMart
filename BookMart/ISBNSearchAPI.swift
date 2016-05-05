@@ -26,7 +26,7 @@ class ISBNSearchAPI {
         }
     }
     
-    class func parse(htmlString: String, userToAdd: User) -> (Book?) {
+    class func parse(htmlString: String, offerToAdd: Offer) -> (Book?) {
         if let doc = Kanna.HTML(html: htmlString, encoding: NSUTF8StringEncoding) {
             print(doc.title)
             
@@ -50,14 +50,23 @@ class ISBNSearchAPI {
             
             let title = doc.css("#book .bookinfo h2")[0].text;
             
-            // check if book exists, if so, add User to array of Users in object
+            // check if book exists, if so, add Offer to Offers in object
             
-            // else create new book object with User as only member of array
+            // else create new book object with offer as only member of array
             let newBook = Book(title: title!, imageURL: imgURL, isbn: isbn, authors: authors)
-            newBook.users.append(userToAdd);
+            newBook.addOffer(offerToAdd)
             return newBook;
         } else {
             return nil
+        }
+    }
+}
+
+extension UIImageView {
+    public func imageFromUrl(urlString: String) {
+        Alamofire.request(.GET, urlString)
+            .response { request, response, data, error in
+                self.image = UIImage(data: data!)
         }
     }
 }

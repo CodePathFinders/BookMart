@@ -22,6 +22,8 @@ class CameraViewController: UIViewController, ZBarReaderDelegate, UIImagePickerC
     @IBOutlet weak var resultText: UITextField!
     @IBOutlet weak var resultImage: UIImageView!
     
+    var parentPageView: OffersPageViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.resultText.delegate = self
@@ -79,6 +81,11 @@ class CameraViewController: UIViewController, ZBarReaderDelegate, UIImagePickerC
             self.resultImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
             
             dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
     }
 
     /*

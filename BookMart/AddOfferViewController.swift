@@ -1,25 +1,22 @@
 //
-//  NavigationController.swift
+//  AddOfferViewController.swift
 //  BookMart
 //
-//  Created by Nav Saini on 3/23/16.
+//  Created by Sita Mulomudi on 5/5/16.
 //  Copyright © 2016 CodePathFinders. All rights reserved.
 //
 
 import UIKit
 
-class NavigationController: UINavigationController {
+class AddOfferViewController: UIViewController {
 
+    @IBAction func onClick(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil) // how to dismiss modal view controllers
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.translucent = false
-        self.navigationBar.backgroundColor = UIColor.blackColor()
-        self.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationBar.barStyle = .Black
-        self.navigationBar.titleTextAttributes = [
-            NSFontAttributeName : UIFont(name: "Lato-Medium", size: 18)!,
-            NSForegroundColorAttributeName : UIColor.whiteColor()
-        ]
+
         // Do any additional setup after loading the view.
     }
 
