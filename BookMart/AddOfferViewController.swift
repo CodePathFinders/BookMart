@@ -10,6 +10,26 @@ import UIKit
 
 class AddOfferViewController: UIViewController {
 
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var bookTitle: UILabel!
+    @IBOutlet var bookAuthors: UILabel!
+    @IBOutlet var bookPrice: UILabel!
+    @IBOutlet var numSellers: UILabel!
+    
+    var book: Book? {
+        didSet {
+            imageView.imageFromUrl((book?.imageURL)!)
+            bookTitle.text = book?.title
+            bookAuthors.text = book?.authors
+        }
+    }
+    
+    var offer: Offer! {
+        didSet {
+            bookPrice.text = "$\(offer.price)"
+        }
+    }
+    
     @IBAction func onClick(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil) // how to dismiss modal view controllers
     }

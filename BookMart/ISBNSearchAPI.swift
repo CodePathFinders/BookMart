@@ -31,6 +31,7 @@ class ISBNSearchAPI {
             print(doc.title)
             
             //image URL
+            print(doc.css("#book .thumbnail img"))
             let imgURL = doc.css("#book .thumbnail img")[0]["src"]
             print("Image URL: \(imgURL)")
             

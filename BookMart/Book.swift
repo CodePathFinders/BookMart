@@ -9,7 +9,7 @@
 import UIKit
 
 struct Books {
-    var list: [Book] = []
+    static var list: [Book] = []
 }
 
 class Book: NSObject {
@@ -28,6 +28,18 @@ class Book: NSObject {
         self.imageURL = imageURL
         self.authors = authors
         self.isbn = isbn
+        super.init()
+        Books.list.append(self)
+    }
+    
+    init(htmldata: String, isbn: String, offer: Offer) {
+        let book = ISBNSearchAPI.parse(htmldata, offerToAdd: offer)
+        self.title = book?.title
+        self.authors = book?.authors
+        self.isbn = book?.isbn
+        self.imageURL = book?.imageURL
+        super.init()
+        Books.list.append(self)
     }
     
     func addOffer(offer: Offer) {

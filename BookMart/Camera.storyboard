@@ -114,7 +114,7 @@
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                 <state key="normal" title="I'm done!"/>
                                 <connections>
-                                    <segue destination="Svb-7T-Zbh" kind="modal" id="EkF-zd-3Hw"/>
+                                    <segue destination="Svb-7T-Zbh" kind="modal" identifier="goToFinalizeOffer" id="EkF-zd-3Hw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -143,6 +143,7 @@
                     <connections>
                         <outlet property="resultImage" destination="6Ez-DO-bH0" id="vPa-LS-kyB"/>
                         <outlet property="resultText" destination="4kn-k8-1Yv" id="5kt-AV-snl"/>
+                        <outlet property="userPrice" destination="ygW-wB-bjj" id="QfP-No-Gqi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVb-BI-Pk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,8 +162,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Finalize your offer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQJ-yX-YqF">
-                                <rect key="frame" x="76" y="160" width="169" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finalize your offer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQJ-yX-YqF">
+                                <rect key="frame" x="76" y="159" width="169" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="8rk-VG-T9O"/>
                                     <constraint firstAttribute="width" constant="169" id="xZL-BE-E24"/>
@@ -175,7 +176,7 @@
                                 <rect key="frame" x="20" y="219" width="280" height="130.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g6E-Tk-JYB">
-                                        <rect key="frame" x="8" y="16.5" width="82" height="97"/>
+                                        <rect key="frame" x="8" y="16" width="82" height="97"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="82" id="NSb-C3-OIl"/>
                                             <constraint firstAttribute="height" constant="97" id="dAK-NO-yLH"/>
@@ -224,8 +225,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITs-ji-b3F">
-                                <rect key="frame" x="137" y="440" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="133" y="448" width="55" height="30"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="onClick:" destination="Svb-7T-Zbh" eventType="touchUpInside" id="9Hh-Jn-T0I"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -238,6 +242,13 @@
                             <constraint firstAttribute="trailing" secondItem="VSN-ut-yhh" secondAttribute="trailing" constant="20" id="sW1-nW-Wtv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bookAuthors" destination="xNQ-Qf-qob" id="is2-RU-zRw"/>
+                        <outlet property="bookPrice" destination="psa-yC-o4H" id="5X4-uQ-Suz"/>
+                        <outlet property="bookTitle" destination="N1S-Mx-cGC" id="oct-3l-XE2"/>
+                        <outlet property="imageView" destination="g6E-Tk-JYB" id="rRg-Us-RQD"/>
+                        <outlet property="numSellers" destination="1bg-uD-g1A" id="kdl-H9-ZaV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ox-WV-yv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

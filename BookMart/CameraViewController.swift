@@ -21,6 +21,7 @@ class CameraViewController: UIViewController, ZBarReaderDelegate, UIImagePickerC
     
     @IBOutlet weak var resultText: UITextField!
     @IBOutlet weak var resultImage: UIImageView!
+    @IBOutlet var userPrice: UITextField!
     
     var parentPageView: OffersPageViewController?
     
@@ -86,6 +87,20 @@ class CameraViewController: UIViewController, ZBarReaderDelegate, UIImagePickerC
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goToFinalizeOffer" {
+            let vc = segue.destinationViewController as! AddOfferViewController
+            ISBNSearchAPI.getInfo(resultText.text!, success: { (request, response, data) in
+                vc.book = Book(htmldata: String(data: data!, encoding: NSUTF8StringEncoding)!, isbn: self.resultText.text!, offer: Offer(price: Double(self.userPrice.text!)!))
+                vc.offer = Offer(price: Double(self.userPrice.text!)!)
+                }, failure: { (error) in
+                    print(error)
+            })
+            //vc.book = Book(isbn: resultText.text!, offer: Offer(price: Double(userPrice.text!)!))
+            //vc.offer = Offer(price: Double(userPrice.text!)!)
+        }
     }
 
     /*

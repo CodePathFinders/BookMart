@@ -20,4 +20,16 @@ class Offer: NSObject {
         self.user = user
         self.book = book
     }
+    
+    init(price: Double) {
+        self.price = price
+    }
+    
+    func specifyUser(user: User) {
+        self.user = user
+    }
+    
+    func specifyBook(book: Book) {
+        self.book = book
+    }
 }
